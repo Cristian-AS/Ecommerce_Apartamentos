@@ -4,12 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio de Sesion</title>
-    <link rel="stylesheet" href="Css/Normalize.css">
-
-    <link rel="stylesheet" href="Css/style.css">
+    <script src="https://kit.fontawesome.com/7dfce2deb6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">    
+    
+    <title>inicioSesion</title>
 </head>
 <body>
-    
+
+    <header>
+        <h1 class="nombre-sitio">Real <span>State</span></h1>
+    </header>
+
+    <div class="contenedor-navegacion">
+        <nav class="navegacion">
+            <a class="navegacion__link" href="index.html">Inicio</a>
+            <a class="navegacion__link" href="nosotros.html">Nosotros</a>
+            <a class="navegacion__link" href="contacto.html">Contacto</a>
+        </nav>
+    </div>
+
+
+    <form class="Formulario">
+        <fieldset>
+        
+            <h1>Iniciar Sesion</h1>
+            <div class="contenedor">
+
+                <div class="input_contenedor">
+                    <!--<i class="fa-solid fa-envelope"></i>-->
+                    <label for="correo"> Correo Electronico: </label>
+                    <input type="email" id="correo" name="correo" required="true" placeholder="Correo Electronico">
+                </div>
+            
+                <div class="input_contenedor">
+                    <!--- <i class="fa-solid fa-key"></i>-->
+                    <label for="Contraseña"> Contraseña: </label> 
+                    <input type="password" id="contraseña" name="contraseña" required="true" placeholder="Contraseña">
+                </div>     
+            </div>
+        </fieldset>
+
+        <input type="submit" value="Iniciar Sesión" class="button"
+        <p>¿No tienes una cuenta?<a class="link" href="registro.html">Registrarse</a></p>
+    </form>
+
 </body>
 </html>
