@@ -1,7 +1,9 @@
-/* negro: #000;
-blanco: #FFFFFF;
-gris: #eeefed;
-grisClaro: #f8f8f8; */
+/* $primario: #3b4862;
+
+$negro: #000;
+$blanco: #FFFFFF;
+$gris: #eeefed;
+$grisClaro: #f8f8f8; */
 
 html {
     box-sizing: border-box;
@@ -12,14 +14,14 @@ html {
 }
 
 body {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.6rem; /* 1.6rem = 16px */
-    line-height: 2; /*Interlineado es bueno colocarlo en todos los proyectos */
+    line-height: 2; 
 }
 
 /** Globales **/
 h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto', cursive;
     margin: 0 0 2rem 0;
 }
 
@@ -55,11 +57,17 @@ a{
     color: #000;
 }
 a:hover {
-    color: #037bc0;
+    color: #c1c4c9;
 }
 
 .contenedor {
     max-width: 120rem;
+    margin: 0 auto;
+}
+
+.contenedor__header{
+    width: 71%;
+    max-width: 1200rem;
     margin: 0 auto;
 }
 
@@ -69,7 +77,7 @@ img {
 }
 
 .btn {
-    background-color: #8cbc00;
+    background-color: #3b4862;
     display: block;
     color: #FFF;
     text-transform: uppercase;
@@ -81,9 +89,9 @@ img {
     width: 100%;
 
 }
-
 .btn:hover {
-    background-color: #769c02;
+    color: #FFF;
+    background-color: #546381;
     cursor: pointer;
 }
 
@@ -99,52 +107,81 @@ img {
 }
 
 /** Header del Index **/
+.header {
+    background-image: linear-gradient( to right, #3b4862e8 0%, #3b4862e8 100% ), url(../Img/header_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 3rem 0 20rem 0;
+}
 
+.header__logo {
+    width: 25rem;
 
-/** Header Y Navegaciones **/
+    transition-property: transform;
+    transition-duration: .3s;
+}
+.header__logo:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
 
-.header-propiedades {
+.header__barra {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 5rem 10rem;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.nav-principal {
-    padding: 2rem 0;
+.header__contenido {
+    margin-top: 10rem;
+    max-width: 50rem;
+}
+
+.header__heading {
+    line-height: 1.3;
+    color: white;
+    text-align: left;
+}
+
+.header__texto {
+    display: block;
+    color: white;
+}
+
+.header__imagen {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -5rem;
+    max-width: 65rem;
+
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 5rem;
+}
+
+.navegacion {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+    margin-top: 0;
 }
-@media (min-width: 768px) { 
-    .nav-principal {
-        justify-content: space-around;
-        flex-direction: row;
-    }
+.navegacion .navegacion__link {
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 0rem;
 }
-
-.contenedor-navegacion {
-    border: 1px solid #e1e1e1;
-}
-
-/** Background Image **/
-.hero {
-    background-image: url(../img/principal.jpg);
-    background-repeat: no-repeat; /* no se va repetir la imagen, buena practica colocarlo */
-    background-size: cover; /* Va tomar todo el espacio */
-    background-position: center center;
-    height: 25rem;
-}
-@media (min-width: 768px) { 
-    .hero {
-        height: 55rem;
-    }
+.navegacion .navegacion__link:hover {
+    color: #c1c4c9;
 }
 
 
 /** Listado de categorias **/
 .categoria {
     padding: 5rem 0;
+}
+.palabra {
+    margin-top: 10rem;
 }
 
 .categoria {
@@ -172,8 +209,8 @@ img {
 }
 
 .categoria a:hover{
-    background-color: #037bc0;
-    color: #FFFFFF;
+    background-color: #eeefed;
+    color: #000000;
     border-bottom-right-radius: 1.5rem;
 }
 
@@ -188,16 +225,16 @@ img {
 
 /** Bloque Nosotros **/
 .sobre-nosotros{
-    background-image: linear-gradient( to bottom, transparent 50%, #037bc0 50%, 
-    #037bc0 100%), url(../img/destacada.jpg);
+    background-image: linear-gradient( to bottom, transparent 50%, #3b4862 50%, 
+    #3b4862 100%), url(../img/destacada.jpg);
     background-position: center, top center ;
     background-repeat: no-repeat;
     background-size: 100%, 80rem;
 }
 @media (min-width: 768px) { 
     .sobre-nosotros{
-        background-image: linear-gradient( to right, transparent 50%, #037bc0 50%, 
-        #037bc0 100%), url(../img/destacada.jpg);
+        background-image: linear-gradient( to right, transparent 50%, #3b4862 50%, 
+        #3b4862 100%), url(../img/destacada.jpg);
         background-position: left center ;
         padding: 10rem 0;
         background-size: 100%, 95rem;
@@ -282,7 +319,7 @@ img {
 }
 
 .producto {
-    background-color: #037bc0 ;
+    background-color: #eeefed ;
     margin-bottom: 2rem;
 }
 @media (min-width: 768px) { 
@@ -297,7 +334,7 @@ img {
 
 .texto-producto {
     text-align: center;
-    color: #FFF;
+    color: #000;
     padding: 2rem ;
 }
 
@@ -356,7 +393,7 @@ img {
 }
 
 .footer-menu a:hover {
-    color: #037bc0;
+    color: #3b4862;
 }
 
 .copyright {
@@ -364,6 +401,53 @@ img {
     text-align: center;
 }
 
+
+
+/** Header Y Navegaciones De PROPIEDADES Y CONTACTO **/
+
+.header-propiedades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem 10rem;
+    
+    transition-property: transform;
+    transition-duration: .3s;
+}
+.header-propiedades:hover {
+    transform: scale(1.1);
+}
+
+.nav-principal {
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media (min-width: 768px) { 
+    .nav-principal {
+        justify-content: space-around;
+        flex-direction: row;
+    }
+}
+
+.contenedor-navegacion {
+    border: 1px solid #e1e1e1;
+}
+
+/** Background Image **/
+.hero {
+    background-image: url(../img/principal.jpg);
+    background-repeat: no-repeat; /* no se va repetir la imagen, buena practica colocarlo */
+    background-size: cover; /* Va tomar todo el espacio */
+    background-position: center center;
+    height: 25rem;
+}
+@media (min-width: 768px) { 
+    .hero {
+        height: 55rem;
+    }
+}
 
 
 /** CONTACTO HMTL**/
@@ -378,7 +462,7 @@ img {
 }
 
 .formulario legend {
-    background-color: #037bc0;
+    background-color: #3b4862;
     width: 100%;
     text-align: center;
     color: #FFF;
