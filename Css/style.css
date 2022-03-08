@@ -190,7 +190,7 @@ img {
 }
 @media (min-width: 1280px) { 
     .header__imagen {
-        max-width: 55rem;
+        max-width: 60rem;
     }
 }
 
