@@ -757,3 +757,43 @@ hr {
     }
 }
 
+
+.descripcion-pagina{
+	color: #020202;
+    text-align: center;
+
+}
+
+.img-nosotros{
+    width: 100px;
+	height: 100px;
+}
+
+hr{
+	border-top: 5px;
+}
+
+#contenido{
+	height: auto; overflow: hidden;
+}
+
+#Historia,#mision,#vision,#valores,#politica,#terminos{
+	width: 245px;
+    overflow: hidden;
+	border: 1px solid #ccc;
+	display: inline-block;
+    text-align: center;
+    justify-content: center;
+    box-shadow: 6px 20px 10px rgb(128, 128, 128);
+    margin: 1rem 10rem;
+	padding: 7px;
+
+}
+
+.img-nosotros{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
