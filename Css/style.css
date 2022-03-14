@@ -757,3 +757,59 @@ hr {
     }
 }
 
+/* ---------------------------------------------------------------------------------- */
+@media (min-width: 1280px) { 
+    .nosotros-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        justify-content: center;
+        margin-top: 3rem;
+    }
+
+    .grid-1, .grid-4 {
+        grid-column: 2 / 3;
+    }
+    .grid-2, .grid-5 {
+        grid-column: 1 / 2;
+    }
+    .grid-3, .grid-6 {
+        grid-column: 3 / 4;
+    }
+}
+
+.descripcion-pagina{
+	color: #020202;
+    text-align: center;
+}
+
+.img-nosotros{
+    width: 100px;
+	height: 100px;
+}
+
+.contenido{
+	height: auto; 
+    overflow: hidden;
+}
+
+.Historia,.mision,.vision,.valores,.politica,.terminos{
+	width: 245px;
+    overflow: hidden;
+	border: 1px solid #ccc;
+	display: inline-block;
+    text-align: center;
+    justify-content: center;
+    box-shadow: 6px 20px 10px rgb(128, 128, 128);
+    margin-left: 17rem;
+	padding: 1rem;
+}
+
+
+.img-nosotros{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
